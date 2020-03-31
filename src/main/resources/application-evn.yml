@@ -1,0 +1,21 @@
+spring:
+  ##配置数据源
+  datasource:
+    url: jdbc:mysql://host:3306/spike_core_product?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+  ##开启JPA
+  jpa:
+    hibernate:
+      ##自动建表
+      ddl-auto: update
+    ##打印sql语句
+    show-sql: true
+  ##配置redis
+  redis:
+    ##默认redis客户端连接为0 可修改
+    database: 0
+    host: 127.0.0.1
+    ##连接端口号 默认是6379 可修改
+    port: 16379
+    # password: ##redis客户端密码

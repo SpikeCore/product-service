@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: spike-core-product-service
+  ##配置数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # url:
+    # username:
+    # password:
+  ##开启JPA
+  jpa:
+    hibernate:
+      ##自动建表
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+    ##打印sql语句
+    show-sql: false
+  ##配置redis
+  redis:
+    ##默认redis客户端连接为0 可修改
+    # database: 0
+    # host: 127.0.0.1
+    ##连接端口号 默认是6379 可修改
+    # port: 16379
+    # password: ##redis客户端密码
+    ##连接超时时间
+    timeout: 5000
+    lettuce:
+      pool:
+        # 连接池中的最大空闲连接 默认8
+        max-idle: 8
+        # 连接池中的最小空闲连接 默认0
+        min-idle: 0
+        # 连接池最大连接数 默认8 ，负数表示没有限制
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认-1
+        max-wait: -1
