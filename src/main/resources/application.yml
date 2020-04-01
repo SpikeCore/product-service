@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: local
   application:
     name: spike-core-product-service
   ##配置数据源
@@ -37,3 +39,7 @@ spring:
         max-active: 8
         # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认-1
         max-wait: -1
+  cache:
+    cache-names: cache1，cache2
+    redis:
+      use-key-prefix: true
